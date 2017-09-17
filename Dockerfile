@@ -25,8 +25,9 @@ RUN mkdir /ethminer
 WORKDIR /ethminer
 
 RUN wget --no-check-certificate $emrel &&\
-      tar -xvf ./*.tar.gz &&\
-      rm *.tar.gz
+    pwd && ll &&\
+    tar -xvf ./*.tar.gz &&\
+    rm *.tar.gz
 
 RUN echo "#!/bin/bash \n /ethminer/bin/ethminer -U -S ${pool1} -FS ${pool2} -O ${ethacct} --cuda-parallel-hash ${cudaph}" > start.sh
 
