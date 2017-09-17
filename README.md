@@ -1,5 +1,5 @@
 # nv-docker-ethminer
-https://travis-ci.org/CultClassik/nv-docker-ethminer.svg?branch=master
+[![Build Status](https://travis-ci.org/CultClassik/nv-docker-ethminer.svg?branch=master)](https://travis-ci.org/CultClassik/nv-docker-ethminer)
 
 Dockerfile to build cultclassik/ethminer-nv GPU container.  Used when mining to ethermine.org.
 
