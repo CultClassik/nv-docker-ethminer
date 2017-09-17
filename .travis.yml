@@ -9,9 +9,11 @@ services:
 
 script:
 - TAG="0.12.0rc3"
+- CONT_NAME="ethminer-nv"
 - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
 - docker build -t cultclassik/ethminer-nv .
 - docker images
-- docker tag cultclassik/ethminer-nv cultclassik/ethminer-nv:latest cultclassik/ethminer-nv:$TAG
+- docker tag cultclassik/$CONT_NAME cultclassik/$CONT_NAME:latest
+- docker tag cultclassik/$CONT_NAME cultclassik/$CONT_NAME:$TAG
 - docker push cultclassik/ethminer-nv:$TAG
 - docker push cultclassik/ethminer-nv

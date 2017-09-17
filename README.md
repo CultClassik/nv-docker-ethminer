@@ -1,11 +1,15 @@
 # nv-docker-ethminer
 [![Build Status](https://travis-ci.org/CultClassik/nv-docker-ethminer.svg?branch=master)](https://travis-ci.org/CultClassik/nv-docker-ethminer)
 
-Dockerfile to build cultclassik/ethminer-nv GPU container.  Used when mining to ethermine.org.
+Dockerfile to build cultclassik/ethminer-nv GPU container for use with ethermine.org.
+
+## Pre-requisites
+
+Docker, Nvidia-Docker, NVidia driver and Cuda toolkit must be installed.
 
 ## Installation
 
-TODO: Describe the installation process
+docker build -t cultclassik/ethminer-nv .
 
 ## Usage
 
