@@ -25,7 +25,7 @@ RUN mkdir /ethminer
 WORKDIR /ethminer
 
 RUN wget --no-check-certificate $emrel &&\
-    pwd && ll &&\
+    pwd && ls -la &&\
     tar -xvf ./*.tar.gz &&\
     rm *.tar.gz
 
