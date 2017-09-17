@@ -1,0 +1,18 @@
+sudo: required
+
+services:
+- docker
+
+script:
+- docker build -t cultclassik/rpilo .
+
+- >
+  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
+    TAG="latest"
+    docker tag cultclassik/ethminer-nv cultclassik/ethminer-nv:$TAG
+    docker push cultclassik/ethminer-nv:$TAG
+    docker push cultclassik/ethminer-nv
+  fi
+
+# TAG=$(grep "ENV TAG_NAME" Dockerfile | awk 'NF>1{print $NF}')
