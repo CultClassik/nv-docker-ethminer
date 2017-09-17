@@ -8,7 +8,7 @@ ARG cudaph=4
 ARG pool1="us2.ethermine.org:4444"
 ARG pool2="us1.ethermine.org:4444"
 
-ENV emrel="https://github.com/ethereum-mining/ethminer/releases/latest"
+ENV emrel="https://github.com/ethereum-mining/ethminer/releases/download/v0.12.0rc3/ethminer-0.12.0rc3-Linux.tar.gz"
 
 ENV GPU_FORCE_64BIT_PTR=0
 ENV GPU_MAX_HEAP_SIZE=100
