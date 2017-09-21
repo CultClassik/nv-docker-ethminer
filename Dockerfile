@@ -3,7 +3,7 @@ FROM nvidia/cuda:8.0-runtime-ubuntu16.04
 MAINTAINER Chris Diehl <cultclassik@gmail.com>
 
 ARG workername="miner"
-ARG ethacct="0x96ae82e89ff22b3eff481e2499948c562354cb23.$docker_host-nvd"
+ARG ethacct="0x96ae82e89ff22b3eff481e2499948c562354cb23" 
 ARG cudaph=4
 ARG pool1="us2.ethermine.org:4444"
 ARG pool2="us1.ethermine.org:4444"
@@ -28,6 +28,6 @@ RUN wget --no-check-certificate $emrel &&\
     tar -xvf ./*.tar.gz &&\
     rm *.tar.gz
 
-RUN echo "#!/bin/bash \n /ethminer/bin/ethminer -U -S ${pool1} -FS ${pool2} -O ${ethacct} --cuda-parallel-hash ${cudaph}" > start.sh
+RUN echo "#!/bin/bash \n /ethminer/bin/ethminer -U -S ${pool1} -FS ${pool2} -O ${ethacct}.${workername} --cuda-parallel-hash ${cudaph}" > start.sh
 
 ENTRYPOINT [ "/bin/bash", "/ethminer/start.sh"]
