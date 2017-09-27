@@ -2,11 +2,11 @@ FROM nvidia/cuda:8.0-runtime-ubuntu16.04
 
 MAINTAINER Chris Diehl <cultclassik@gmail.com>
 
+ENV WORKER
 ENV ETHACCT="0x96ae82e89ff22b3eff481e2499948c562354cb23"
 ENV CUDAPH=4
 ENV POOL1="us2.ethermine.org:4444"
 ENV POOL2="us1.ethermine.org:4444"
-ENV WORKER="miner"
 ENV EMREL="https://github.com/ethereum-mining/ethminer/releases/download/v0.12.0/ethminer-0.12.0-Linux.tar.gz"
 
 ENV GPU_FORCE_64BIT_PTR=0
