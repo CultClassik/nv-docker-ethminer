@@ -27,7 +27,9 @@ RUN wget --no-check-certificate $EMREL &&\
     tar -xvf ./*.tar.gz &&\
     rm *.tar.gz
 
-RUN echo "#!/bin/bash \n /ethminer/bin/ethminer -U -S ${POOL1} -FS ${POOL2} -O ${ETHACCT}.${WORKER} --cuda-parallel-hash ${CUDAPH}" > start.sh
+#RUN echo "#!/bin/bash \n /ethminer/bin/ethminer -U -S ${POOL1} -FS ${POOL2} -O ${ETHACCT}.${WORKER} --cuda-parallel-hash ${CUDAPH}" > start.sh
 
-ENTRYPOINT [ "/bin/bash", "/ethminer/start.sh"]
+#ENTRYPOINT [ "/bin/bash", "/ethminer/start.sh"]
+
+CMD ["/ethminer/bin/ethminer", "-U", "-S", "${POOL1}", "-FS", "${POOL2}", "-O", "${ETHACCT}.${WORKER}", "--cuda-parallel-hash", "${CUDAPH}"]
 
