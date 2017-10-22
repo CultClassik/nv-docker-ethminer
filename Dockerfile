@@ -28,6 +28,6 @@ RUN wget --no-check-certificate $EMREL &&\
     tar -xvf ./*.tar.gz &&\
     rm *.tar.gz
 
-RUN echo '/ethminer/bin/ethminer -U -S $POOL1 -FS $POOL2 -O $ETHACCT.$WORKER --cuda-parallel-hash $CUDAPH --api-port $APIPORT' > start.sh
+RUN echo '/ethminer/bin/ethminer -RH -U -S $POOL1 -FS $POOL2 -O $ETHACCT.$WORKER --cuda-parallel-hash $CUDAPH --api-port $APIPORT' > start.sh
 
 ENTRYPOINT [ "/bin/bash", "/ethminer/start.sh"]
