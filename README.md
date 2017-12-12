@@ -3,9 +3,11 @@
 
 Dockerfile to build cultclassik/ethminer-nv GPU container for use with ethermine.org.
 
+Updated from nvidia-docker to nvidia-docker2 on 12-11-17.
+
 ## Pre-requisites
 
-Docker, Nvidia-Docker, NVidia driver and Cuda toolkit must be installed.
+Requires a working installation of Docker CE or EE and Nvidia-Docker2.
 
 ## Installation
 
