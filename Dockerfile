@@ -38,4 +38,6 @@ RUN wget --no-check-certificate $EMREL &&\
 
 RUN echo '/ethminer/bin/ethminer -RH -U -S $POOL1 -FS $POOL2 -O $ETHACCT.$WORKER --cuda-parallel-hash $CUDAPH --api-port $API_PORT' > start.sh
 
+EXPOSE $API_PORT
+
 ENTRYPOINT [ "/bin/bash", "/ethminer/start.sh"]
