@@ -1,5 +1,5 @@
 #FROM nvidia/cuda:8.0-runtime-ubuntu16.04
-FROM nvidia/9.0-base-ubuntu17.04
+FROM nvidia/cuda:9.0-base-ubuntu17.04
 
 MAINTAINER Chris Diehl <cultclassik@gmail.com>
 
